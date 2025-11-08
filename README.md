@@ -1,4 +1,4 @@
-# HOSIG
+# HOSIG: Full-Body Human-Object-Scene Interaction Generation with Hierarchical Scene Perception
 [![report](https://img.shields.io/badge/Project-Page-blue)](https://yw0208.github.io/hosig/)
 [![report](https://img.shields.io/badge/ArXiv-Paper-red)](https://arxiv.org/abs/2506.01579)
 
