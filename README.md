@@ -64,6 +64,7 @@ We provide visulization code for the generated motions. Run the following comman
 ```
 python demo\visualize\vis_smplx_params_all.py
 ```
+Visualization codes are based on [aitviewer](https://github.com/eth-ait/aitviewer), recommended to install on Windows.
 
 ## 🔗 Citation
 
