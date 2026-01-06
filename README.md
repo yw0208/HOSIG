@@ -17,6 +17,8 @@ Hello everyone, thanks for your patience. HOSIG has now been accepted by **AAAI 
 
 📢 **30/Nov/25** - Released inference code and processed TRUMANS for Scene-Guided Controllable Motion Generation.
 
+📢 **6/Jan/26** - The preprocessed trumans data has been updated. If you encounter Size Mismatch issues during runtime, please refer to this [issue](https://github.com/yw0208/HOSIG/issues/5) and redownload the data again.
+
 ## 📝 TODO List  
 - [x] Release inference demo for Scene-Guided Controllable Motion Generation
 - [ ] Release inference demo for Heuristic Navigation on 2D Obstacle-Aware Map
