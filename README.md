@@ -21,7 +21,7 @@ Hello everyone, thanks for your patience. HOSIG has now been accepted by **AAAI 
 
 ## 📝 TODO List  
 - [x] Release inference demo for Scene-Guided Controllable Motion Generation
-- [ ] Release inference demo for Heuristic Navigation on 2D Obstacle-Aware Map
+- [x] Release inference demo for Heuristic Navigation on 2D Obstacle-Aware Map
 - [ ] Release inference demo for Scene-Aware Grasp Pose Generation 
 - [ ] Release training for motion generator, including codes and data
 - [ ] Release training for pose generator, including codes and data
@@ -67,6 +67,13 @@ We provide visulization code for the generated motions. Run the following comman
 python demo\visualize\vis_smplx_params_all.py
 ```
 Visualization codes are based on [aitviewer](https://github.com/eth-ait/aitviewer), recommended to install on Windows.
+
+### Heuristic Navigation on 2D Obstacle-Aware Map
+
+To run the demo, run the following command:
+```
+python demo\infer\object_A_star_3point.py
+```
 
 ## 🔗 Citation
 
