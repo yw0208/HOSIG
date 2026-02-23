@@ -219,7 +219,7 @@ if __name__=='__main__':
     scene_id = 1
 
     #  convert scene to a 2d array
-    scene_mesh=trimesh.load_mesh(f'E:\TRUMAN\Scene_Mesh_ply\\{scene[scene_id]}.ply')
+    scene_mesh=trimesh.load_mesh(f'TRUMAN/Scene_Mesh_ply/{scene[scene_id]}.ply')
     scene_vertices=scene_mesh.vertices
 
     print(scene_vertices[:,0].max(),scene_vertices[:,0].min(),scene_vertices[:,1].max(),scene_vertices[:,1].min(),scene_vertices[:,2].max(),scene_vertices[:,2].min())
@@ -235,10 +235,10 @@ if __name__=='__main__':
     transl = np.array([cup_01[scene_id, 0, :3, -1], cup_01[scene_id, 1, :3, -1]])
     obj_translation = transl[:, :2]
     human_transl2obj = np.zeros((2, 3))
-    human_transl_dir = fr"D:\Projects\chois_release\scratch\object_A_star\temp_data\data_cup_01_{scene_id:02d}"
+    human_transl_dir = fr"demo/data/key_frames/data_cup_01_{scene_id:02d}"
     file_name = sorted(os.listdir(human_transl_dir))
-    human_transl2obj[0, :] = np.load(fr"D:\Projects\chois_release\scratch\object_A_star\temp_data\data_cup_01_{scene_id:02d}\{file_name[1]}")
-    human_transl2obj[1, :] = np.load(fr"D:\Projects\chois_release\scratch\object_A_star\temp_data\data_cup_01_{scene_id:02d}\{file_name[3]}")
+    human_transl2obj[0, :] = np.load(fr"demo/data/key_frames/data_cup_01_{scene_id:02d}/{file_name[1]}")
+    human_transl2obj[1, :] = np.load(fr"demo/data/key_frames/data_cup_01_{scene_id:02d}/{file_name[3]}")
 
     key_points_ori = np.array([
         human_cup_01[scene_id][:2],
