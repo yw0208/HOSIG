@@ -15,6 +15,8 @@ Hello everyone, thanks for your patience. HOSIG has now been accepted by **AAAI 
 
 ## News
 
+📢 **27/Feb/26** - Released inference and training code and processed TRUMANS for Scene-Aware Grasp Pose Generation.
+
 📢 **6/Jan/26** - The preprocessed trumans data has been updated. If you encounter Size Mismatch issues during runtime, please refer to this [issue](https://github.com/yw0208/HOSIG/issues/5) and redownload the data again.
 
 📢 **30/Nov/25** - Released inference code and processed TRUMANS for Scene-Guided Controllable Motion Generation.
@@ -22,9 +24,9 @@ Hello everyone, thanks for your patience. HOSIG has now been accepted by **AAAI 
 ## 📝 TODO List  
 - [x] Release inference demo for Scene-Guided Controllable Motion Generation
 - [x] Release inference demo for Heuristic Navigation on 2D Obstacle-Aware Map
-- [ ] Release inference demo for Scene-Aware Grasp Pose Generation 
+- [x] Release inference demo for Scene-Aware Grasp Pose Generation 
 - [ ] Release training for motion generator, including codes and data
-- [ ] Release training for pose generator, including codes and data
+- [x] Release training for pose generator, including codes and data
 - [ ] Release evaluation pipeline
 - [ ] Release codes for processing data
 
@@ -73,6 +75,30 @@ Visualization codes are based on [aitviewer](https://github.com/eth-ait/aitviewe
 To run the demo, run the following command:
 ```
 python demo\infer\object_A_star_3point.py
+```
+
+### Scene-Aware Grasp Pose Generation
+
+First, go to [Baidu Pan](https://pan.baidu.com/s/1XL582kCx8NI7P02vbGa8qg?pwd=trcf), find the `TRUMAN/process4Gnet_3obj` folder and download it. Place it anywhere you like (note that you need to modify the file path in the code, Ctrl+Shift+F `process4Gnet_3obj`). 
+
+To run the demo, run the following command:
+
+```
+cd sgap
+
+python sgap\generate\multi_samples\get_batch.py
+
+python sgap\generate\multi_samples\generate_one_sample.py
+```
+
+Note that SGAP cannot generate perfect results every time, so we choose to generate 10 times for each sample and then manually select the best result as the guide for SCoMoGen.
+
+To train the model, run the following command:
+
+```
+cd sgap
+
+python train\train.py
 ```
 
 ## 🔗 Citation

@@ -1,0 +1,6 @@
+2026-02-27 20:44:57.864 | INFO     | __main__:__init__:78 - [GNet_3obj] - Started training XXX, experiment code 2026-02-27 20:44:57
+2026-02-27 20:44:57.865 | INFO     | __main__:__init__:79 - tensorboard --logdir=saves/GNet_3obj/summaries
+2026-02-27 20:44:57.866 | INFO     | __main__:__init__:80 - Torch Version: 2.0.0+cu118
+
+2026-02-27 20:44:57.925 | INFO     | __main__:__init__:93 - Using 1 CUDA cores [NVIDIA GeForce RTX 3090] for training!
+2026-02-27 20:44:57.926 | INFO     | __main__:load_data:267 - Base dataset_dir is /opt/data/private/datasets/TRUMANS/process4Gnet_3obj
