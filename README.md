@@ -15,6 +15,8 @@ Hello everyone, thanks for your patience. HOSIG has now been accepted by **AAAI 
 
 ## News
 
+📢 **1/Mar/26** - Released training code for Scene-Guided Controllable Motion Generation.
+
 📢 **27/Feb/26** - Released inference and training code and processed TRUMANS for Scene-Aware Grasp Pose Generation.
 
 📢 **6/Jan/26** - The preprocessed trumans data has been updated. If you encounter Size Mismatch issues during runtime, please refer to this [issue](https://github.com/yw0208/HOSIG/issues/5) and redownload the data again.
@@ -25,7 +27,7 @@ Hello everyone, thanks for your patience. HOSIG has now been accepted by **AAAI 
 - [x] Release inference demo for Scene-Guided Controllable Motion Generation
 - [x] Release inference demo for Heuristic Navigation on 2D Obstacle-Aware Map
 - [x] Release inference demo for Scene-Aware Grasp Pose Generation 
-- [ ] Release training for motion generator, including codes and data
+- [x] Release training for motion generator, including codes and data
 - [x] Release training for pose generator, including codes and data
 - [ ] Release evaluation pipeline
 - [ ] Release codes for processing data
@@ -69,6 +71,16 @@ We provide visulization code for the generated motions. Run the following comman
 python demo\visualize\vis_smplx_params_all.py
 ```
 Visualization codes are based on [aitviewer](https://github.com/eth-ait/aitviewer), recommended to install on Windows.
+
+#### Train
+
+First, you need to train the main branch of SCoMoGen. Please refer to [MDM_359](https://github.com/yw0208/MDM_359) to train the model, or directly use the latest updated `save/model000475000.pt` from [Baidu Pan](https://pan.baidu.com/s/1XL582kCx8NI7P02vbGa8qg?pwd=trcf).
+
+Then, you can train the control branch of SCoMoGen for motion generation. Run the following command:
+
+```
+python -m train.train_mdm --save_dir save/scomogen --dataset trumans --num_steps 400000 --batch_size 64 --resume_checkpoint ./save/model000475000.pt --lr 1e-5
+```
 
 ### Heuristic Navigation on 2D Obstacle-Aware Map
 
