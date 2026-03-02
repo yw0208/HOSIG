@@ -575,8 +575,10 @@ def vis_ours(obj_name, motion_id):
     )
 
     # 存储human和object的mesh序列
-    # save_mesh_sequence(smpl_squence, "scratch\\vis_motions\\results_mesh", is_human=True)
-    # save_mesh_sequence(object_mesh, "scratch\\vis_motions\\results_mesh", is_human=False)
+    if not os.path.exists(f"evalution/ours/scene_{motion_id}/{obj_name}"):
+        os.makedirs(f"evalution/ours/scene_{motion_id}/{obj_name}")
+    save_mesh_sequence(smpl_squence, f"evalution/ours/scene_{motion_id}/{obj_name}", is_human=True)
+    save_mesh_sequence(object_mesh, f"evalution/ours/scene_{motion_id}/{obj_name}", is_human=False)
 
     return smpl_squence, object_mesh, scene_mesh_ait ,joints[:, 0]
 
