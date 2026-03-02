@@ -15,6 +15,8 @@ Hello everyone, thanks for your patience. HOSIG has now been accepted by **AAAI 
 
 ## News
 
+📢 **2/Mar/26** - Released evaluation code.
+
 📢 **1/Mar/26** - Released training code for Scene-Guided Controllable Motion Generation.
 
 📢 **27/Feb/26** - Released inference and training code and processed TRUMANS for Scene-Aware Grasp Pose Generation.
@@ -29,7 +31,7 @@ Hello everyone, thanks for your patience. HOSIG has now been accepted by **AAAI 
 - [x] Release inference demo for Scene-Aware Grasp Pose Generation 
 - [x] Release training for motion generator, including codes and data
 - [x] Release training for pose generator, including codes and data
-- [ ] Release evaluation pipeline
+- [x] Release evaluation pipeline
 - [ ] Release codes for processing data
 
 ## 📖 Getting Started
@@ -111,6 +113,18 @@ To train the model, run the following command:
 cd sgap
 
 python train\train.py
+```
+
+## 🛠️ Evaluation
+To evaluate the performance of SCoMoGen, run the following command:
+```
+python evaluation\eval_interaction.py
+```
+Note that you should prepare evaluation meshes following `demo\visualize\vis_smplx_params_all.py`.
+
+To evaluate the performance of SGAP, run the following command:
+```
+python evaluation\eval_grasp.py
 ```
 
 ## 🔗 Citation
