@@ -465,7 +465,7 @@ class GaussianDiffusion:
             else:
                 grad = torch.autograd.grad([loss_joint[..., 0].sum(), loss_joint[..., 1:].sum(), loss_handrotation.sum()], [x])[0]
                 ori_scene_loss, mask_dist, e_num = None, None, None
-                print('hahaha')
+                # print('hahaha')
             
             # the motion in HumanML3D always starts at the origin (0,y,0), so we zero out the gradients for the root joint
             grad[..., 0] = 0
