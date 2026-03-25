@@ -27,7 +27,7 @@ def rotmat2aa(pose):
 
 if __name__ == '__main__':
     object_info={}
-    obj_dir="/opt/data/private/datasets/TRUMANS/processed_data/captured_objects"
+    obj_dir="TRUMANS/object_ply_w_1024"
     for obj_file in tqdm(sorted(os.listdir(obj_dir)),desc='OBJ_INF'):
         obj_name=obj_file.replace('.ply','')
         if obj_name in ['cup_01', 'mouse_01', 'bottle_03']:
