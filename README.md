@@ -72,7 +72,7 @@ We provide visulization code for the generated motions. Run the following comman
 ```
 python demo\visualize\vis_smplx_params_all.py
 ```
-Visualization codes are based on [aitviewer](https://github.com/eth-ait/aitviewer), recommended to install on Windows.
+Visualization codes are based on [aitviewer](https://github.com/eth-ait/aitviewer), recommended to install on Windows. Some people may encounter strange bugs due to version updates when running my code. I have an older version of `smpl.py` in `assets`. Please replace `aitviewer\renderables\smpl.py` with the older version; this may solve the problem.
 
 #### Train
 
@@ -132,10 +132,13 @@ python evaluation\eval_grasp.py
 If you find our work helpful, please cite:
 
 ```bibtex
-@article{yao2025hosig,
-  title={HOSIG: Full-Body Human-Object-Scene Interaction Generation with Hierarchical Scene Perception},
+@inproceedings{yao2026hosig,
+  title={Hosig: Full-body human-object-scene interaction generation with hierarchical scene perception},
   author={Yao, Wei and Sun, Yunlian and Zhang, Hongwen and Liu, Yebin and Tang, Jinhui},
-  journal={arXiv preprint arXiv:2506.01579},
-  year={2025}
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={40},
+  number={14},
+  pages={11901--11909},
+  year={2026}
 }
 ```
